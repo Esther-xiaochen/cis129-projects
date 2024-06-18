@@ -1,1 +1,19 @@
+if myAge == 31 and yourAge < myAge:
+   Display "My age is 31 and your age is less than that"
+else:
+   Display "Our ages do not qualify"
 
+if myAge <= 35 and myAge >= 32:
+   Display "My age is between 32 and 35"
+else:
+   Display "My age is not within that range"
+
+if yourAge == votingAge or yourAge > votingAge:
+   Display "You can vote"
+else:
+   Display "You cannot vote"
+
+if myNumber == 83 or yourNumber == 83:
+   Display "One of our numbers is 83"
+else:
+   Display "83 is not our numbers"

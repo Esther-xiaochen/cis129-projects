@@ -1,39 +1,40 @@
 # cis129_lab03_coffeeShop.py
-# Author: [Xiaochen Zhang]
 
-def main():
-    print("***************************************")
-    print("My Coffee and Muffin Shop")
-    num_coffees = int(input("Number of coffees bought?\n"))
-    num_muffins = int(input("Number of muffins bought?\n"))
-    num_teas = int(input("Number of teas bought?\n"))
-    num_cookies = int(input("Number of cookies bought?\n"))
-    print("***************************************\n")
-    
-    # Prices - 价格
-    price_coffee = 5.00
-    price_muffin = 4.00
-    price_tea = 3.00
-    price_cookie = 2.50
+#Coffee at $5 each: $ 5.00
+#Muffins at $4 each: $ 8.00
+#6% tax: $ .78
 
-    # Calculate costs - 计算费用
-    subtotal = (num_coffees * price_coffee) + (num_muffins * price_muffin) + (num_teas * price_tea) + (num_cookies * price_cookie)
-    tax = subtotal * 0.06
-    total = subtotal + tax
+# Author: Xiaochen zhang
 
-    # Print receipt - 打印收据
-    print("***************************************")
-    print("My Coffee and Muffin Shop Receipt")
-    print(f"{num_coffees} Coffee at $5 each: $ {num_coffees * price_coffee:.2f}")
-    print(f"{num_muffins} Muffins at $4 each: $ {num_muffins * price_muffin:.2f}")
-    print(f"{num_teas} Tea at $3 each: $ {num_teas * price_tea:.2f}")
-    print(f"{num_cookies} Cookies at $2.5 each: $ {num_cookies * price_cookie:.2f}")
-    print(f"6% tax: $ {tax:.2f}")
-    print("---------")
-    print(f"Total: $ {total:.2f}")
-    print("***************************************")
-    print("Thank you for visiting My Coffee and Muffin Shop!\nPlease come again!")
-    # 感谢光临我的咖啡和松饼店！欢迎再次光临！
+#this input many coffee and muffin 
+print("***********************************")
+print("My Coffee and Muffin Shop ")
+print("how much coffee")
 
-if __name__ == "__main__":
-    main()
+coffee = input ()
+
+print("how many muffins do you want?")
+
+muffins = input ()
+
+print("***********************************")
+print()
+print()
+print("***********************************")
+
+#this caclculates the total cost of the coffee
+totalcoffeecoat = int(coffee) * 5
+
+totalmuffinscoat = int(muffins) * 4
+
+totalcost = (totalcoffeecoat + totalmuffinscoat)
+
+#this print the recpeit
+print("My Coffee and Muffin Shop Receipt")
+print (coffee + " coffer at $5 each:$" + str (totalcoffeecoat) + ".00" )
+print (muffins + " muffins at $4 each:$" + str (totalmuffinscoat) + ".00")
+print ("6% tax: $" + str (totalcost * .06))
+print ("------------")
+print("total: $" + str(totalcost + (totalcost * .06)))
+print("***********************************")
+

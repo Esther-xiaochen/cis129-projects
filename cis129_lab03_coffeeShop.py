@@ -6,7 +6,7 @@
 
 # Author: Xiaochen zhang
 
-#this input many coffee and muffin 
+#this input many coffee, muffin ,sugar and tea
 print("***********************************")
 print("My Coffee and Muffin Shop ")
 print("how much coffee")
@@ -16,6 +16,14 @@ coffee = input ()
 print("how many muffins do you want?")
 
 muffins = input ()
+
+print("how much sugar")
+
+sugar = input ()
+
+print("how much tea")
+
+tea = input ()
 
 print("***********************************")
 print()
@@ -27,14 +35,19 @@ totalcoffeecoat = int(coffee) * 5
 
 totalmuffinscoat = int(muffins) * 4
 
-totalcost = (totalcoffeecoat + totalmuffinscoat)
+totalsugarcoat = int(sugar) * 1
+
+totalteacoat = int(tea) * 8
+
+totalcost = (totalcoffeecoat + totalmuffinscoat + totalsugarcoat + totalteacoat)
 
 #this print the recpeit
 print("My Coffee and Muffin Shop Receipt")
 print (coffee + " coffer at $5 each:$" + str (totalcoffeecoat) + ".00" )
 print (muffins + " muffins at $4 each:$" + str (totalmuffinscoat) + ".00")
+print (sugar + " sugar at $1 each:$" + str (totalsugarcoat) + ".00")
+print (tea + " tea at $8 each:$" + str (totalteacoat) + ".00")
 print ("6% tax: $" + str (totalcost * .06))
 print ("------------")
 print("total: $" + str(totalcost + (totalcost * .06)))
 print("***********************************")
-

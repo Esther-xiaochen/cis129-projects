@@ -1,0 +1,30 @@
+#Module 11 9.1
+#Author: Xiaochen zhang
+#2024/7/22
+#CLASS AVERAGE: WRITING GRADES TO A PLAIN TEXT FILE)
+
+grades = []
+
+with open('grades.txt', mode='w') as file: 
+    print("Enter grades to store in the file. Enter '-1' to finish.")
+    
+    while True:
+            # Input grade
+            grade = input("Enter a grade: ")
+            
+            # Input sentinel value, whether to stop the loop
+            if grade == "-1":
+                break
+        
+            try:
+                # Converting strings to floating point numbers and saving them
+                grades.append(float(grade))
+            
+            except ValueError:
+                print("Invalid input. Please enter a numeric value again.")
+                # If the input is not a valid number, start over
+    
+    for grade in grades:
+            file.write(f"{grade}\n")
+
+print("Grades have been written to grades.txt.")

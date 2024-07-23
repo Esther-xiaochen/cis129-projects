@@ -1,0 +1,36 @@
+#Module 11 9.3
+#Author: Xiaochen zhang
+#2024/7/22
+#CLASS AVERAGE: WRITING STUDENT RECORDS TO A CSV FILE
+
+import csv
+
+# Open the file in write mode
+with open('grades.csv', mode='w') as file:
+   
+    writer = csv.writer(file) 
+    # Create a write object for writing data to a file
+
+    writer.writerow(['firstname', 'lastname', 'exam1grade', 'exam2grade', 'exam3grade'])
+    # Write the header row 
+
+    # Loop to enter student records
+    while True:
+        # Get student information
+        firstname = input("Enter student's first name: ")
+        if firstname == "-1":
+                break
+        
+        try:
+            lastname = input("Enter student's last name: ")
+            exam1grade = float(input("Enter exam 1 grade: "))
+            exam2grade = float(input("Enter exam 2 grade: "))
+            exam3grade = float(input("Enter exam 3 grade: "))
+            
+            # Write the record to the CSV file 
+            writer.writerow([firstname, lastname, exam1grade, exam2grade, exam3grade])
+        
+        except ValueError:
+            print("Please enter valid numeric values for grades.")
+
+print("All records have been written to grades.csv.")

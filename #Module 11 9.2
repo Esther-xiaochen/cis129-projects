@@ -1,0 +1,32 @@
+#Module 11 9.2
+#Author: Xiaochen zhang
+#2024/7/22
+#CLASS AVERAGE: READING GRADES FROM A PLAIN TEXT FILE
+
+grades = []
+
+try:
+    with open('grades.txt', mode='r') as file:
+        for record in file:
+        # Read the contents of a file line by line
+            try:
+                grades.append(float(record.strip()))
+
+            except ValueError:
+                print(f"Invalid grade found in file: {record.strip()}")
+                # If the input is not a valid number, start over
+
+except FileNotFoundError:
+    print("The file grades.txt was not found.")
+else:
+    total = sum(grades) #Calculate the total score
+    count = len(grades) #Calculation of the number of grades
+    average = total / count if count != 0 else 0 #Avoiding divide-by-zero errors 
+
+    # Display the grades, total, count, and average
+    print("Grades:")
+    for grade in grades:
+        print(grade)
+    print(f"\nTotal: {total}")
+    print(f"Count: {count}")
+    print(f"Average: {average:.2f}")
